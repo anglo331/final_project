@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %} sing_up {% endblock %} {% block
+body%}
+
+<div class="login-box">
+    <h2 class="center">Create Account</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                name="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+            />
+
+            <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+                type="password1"
+                class="form-control"
+                name="password1"
+                id="exampleInputPassword1"
+                placeholder="Password"
+            />
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                name="password2"
+                id="exampleInputPassword1"
+                placeholder="conferme password"
+            />
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">age</label>
+            <input
+                type="number"
+                class="form-control"
+                name="age"
+                id="exampleInputPassword1"
+                placeholder="how old are you"
+            />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{%endblock%}
