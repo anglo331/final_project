@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title%} profile {%endblock%} {%block body%}
+
+<style>
+    body {
+        background-image: url("https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<div class="container d-flex flex-column">
+    <p class="text-center h2">hi {{username}}</p>
+
+    <div
+        class="container border border-black w-25 rounded bg-light text-center"
+    >
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPtsRBphC9vLTrEnyulEqxYhmrGlXcsbxyvN9JBnIVsQ&s"
+            alt="random image"
+            class="border align-self-center rounded border-danger rounded-circle"
+        />
+
+        <p class="h6">
+            <span class="h5 alert-danger fw-bold">username:</span> {{username}}
+        </p>
+        <p class="h6">
+            <span class="h5 alert-danger fw-bold">email:</span> {{username}}
+        </p>
+    </div>
+</div>
+{% endblock %}
