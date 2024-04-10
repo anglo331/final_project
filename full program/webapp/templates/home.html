@@ -2,6 +2,24 @@
 
 {% block body %}
 
-<br  class="line-break">
-<h1> hello  anglo</h1>
+<h1> Hi 👋, {{ user['u_name'] }}</h1>
+
+<div class="container">
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+		{%  for item in itmes %}
+		  <div class="col-3 h-100 mt-3">
+			<div class="card">
+			  <img src="https://m.media-amazon.com/images/I/41m+OiUK6ML._AC_UL320_.jpg" class="card-img-top " alt="...">
+			  <div class="card-body">
+				<a class="card-title text-center h5" href="{{ url_for('views.product',id=item.id)}}">{{ item.Brand }} {{ item.model_name }}</a>
+				<p class="card-text w-100">price = {{ item.price }}$</p>
+			  </div>
+			</div>
+		  </div>
+		{% endfor %}
+	</div>
+</div>
+
+
+
 {% endblock %}
