@@ -22,14 +22,16 @@ class Phones(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Brand = db.Column(db.String(100))
     model_name = db.Column(db.String(100))
-    seller = db.Column(db.String(225))
+    seller = db.Column(db.String(50))
     Storage_in_GB = db.Column(db.Integer)
     RAM = db.Column(db.Integer)
     Screen_Size_inches = db.Column(db.Float)
     Camera = db.Column(db.String(100))
     Battery_capacity = db.Column(db.Integer)
     current_price = db.Column(db.Integer)
+    product_url = db.Column(db.String(225))
     img_url = db.Column(db.String(225))
+
     relations = db.relationship('price_history')
 
     def __repr__(self):
