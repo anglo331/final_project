@@ -13,6 +13,8 @@ phone_args.add_argument(
 phone_args.add_argument(
     'model_name', type=str, help='Phone model is missing please enter phone model')
 phone_args.add_argument(
+    'color', type=str, help='Phone color is missing please enter phone model')
+phone_args.add_argument(
     'seller', type=str, help='Phone seller is missing please enter phone seller like [ amazon, noon, etc.]')
 phone_args.add_argument('Storage_in_GB', type=int,
                         help='Phone storage size is missing ')
@@ -36,6 +38,7 @@ represent_data = {
     'id': fields.Integer,
     'Brand': fields.String,
     'model_name': fields.String,
+    'color': fields.String,
     'seller': fields.String,
     'Storage_in_GB': fields.Integer,
     'RAM': fields.Integer,

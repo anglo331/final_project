@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+		{% block extra_links %}
+		{% endblock %}
 
         <!--  the title code to is setting a variable for the title-->
         <title>
@@ -16,7 +18,7 @@
     <body>
 		<!-- setting the nave bar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="{{url_for('views.home')}}">Delat</a>
+		<a class="navbar-brand" href="{{url_for('views.home')}}">E-📳 Delta</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -43,10 +45,10 @@
 				{%endif%}
 			</ul>
 			{% if user.is_authenticated %}
-				<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
+<!--				<form class="form-inline my-2 my-lg-0">-->
+<!--				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--				</form>-->
 			{%endif%}
 		</div>
 		</nav>
@@ -82,7 +84,7 @@
          {% block body %}hello mom {% endblock %}
 
 <div class="mw-100 p-5">
-  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top bg-light">
     <div class="col mb-3">
       <h5>Team Members</h5>
       <ul class="nav flex-column">

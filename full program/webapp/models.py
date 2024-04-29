@@ -22,6 +22,7 @@ class Phones(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Brand = db.Column(db.String(100))
     model_name = db.Column(db.String(100))
+    color = db.Column(db.String(100))
     seller = db.Column(db.String(50))
     Storage_in_GB = db.Column(db.Integer)
     RAM = db.Column(db.Integer)

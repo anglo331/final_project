@@ -1,57 +1,58 @@
 {% extends "base.html" %} {% block title %} sing_up {% endblock %} {% block
 body%}
-
-<div class="login-box">
-    <h2 class="center">Create Account</h2>
+<div class=" m-3"></div>
+<div class="d-flex">
+<div class="login-box align-content-center container mb-5" style="background-color: rgb(240, 235, 238); width:400px; border-radius: 25px;
+padding-top:35px;">
+    <h2 class="center" style="text-align:center"><b>Create Account</b></h2>
     <form method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+        <div class="form-group" style="width: 350px;margin-left:4%;">
+            <label for="exampleInputuserName"><b>User Name</b></label>
             <input
-                type="email"
+                type="User Name"
                 class="form-control"
-                id="exampleInputEmail1"
-                name="email"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
+                id="exampleInputuserName"
+                name="user name"
+                aria-describedby="user nameHelp"
+                placeholder="Enter user name"
             />
-
-            <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else. 😶‍🌫️</small
-            >
         </div>
 
-	    <div class="form-group">
-		    <label for="u_name">User Name</label>
-		    <input
-				    type="text"
-				    class="form-control"
-				    name="u_name"
-				    id="u_name"
-				    placeholder="User Name"
-		    />
-	    </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+        <div class="form-group" style="width: 350px;margin-left:4%;">
+            <label for="exampleInputPassword1"><b>Email</b></label>
             <input
-                type="password"
+                type="Email"
                 class="form-control"
-                name="password1"
+                name="Email"
+                id="exampleInputemail"
+                placeholder="Enter Email"
+            />
+
+        </div>
+        <div class="form-group" style="width: 350px;margin-left:4%;">
+            <label for="exampleInputPassword1"><b> Password</b></label>
+            <input
+                type="Password"
+                class="form-control"
+                name="Password"
                 id="exampleInputPassword1"
                 placeholder="Password"
             />
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">confirm password</label>
+        <div class="form-group" style="width: 350px;margin-left:4%;">
+            <label for="exampleInputConfirmPassword"><b>Confirm Password</b></label>
             <input
                 type="password"
                 class="form-control"
-                name="password2"
-                id="exampleInputPassword1"
-                placeholder="confirm password"
-            />
+                id="exampleInputConfirmPassword"
+                name="confirm password"
+                aria-describedby="confirmPasswordHelp"
+                placeholder="Enter confirm password"
+            >
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        
+        <button type="submit" class="btn btn-primary ms-2 mb-2">Submit</button>
     </form>
 </div>
-
+</div>
 {%endblock%}
