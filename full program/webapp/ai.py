@@ -1,7 +1,12 @@
 from langchain_community.llms import Ollama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain.text_splitter import HTMLHeaderTextSplitter
+from langchain_community.document_loaders import UnstructuredHTMLLoader
+import requests
 import ollama
+
+
 
 
 def llm_init(path: str = '') -> bool:
@@ -24,12 +29,17 @@ def llm_init(path: str = '') -> bool:
     return (found_llms, False)
 
 
+def data_loding(url):
+    loder = UnstructuredHTMLLoader(url)
+    loder.load()
+
+
 def simplechat(prompt: str):
 
     llm = Ollama(model='delta_llm')
 
     _prompt = ChatPromptTemplate.from_messages([
-        ('system', 'your name is delta-chat-bot and you are helping people to find the best phone that fits there needs and your response should not exceeds 100 word'),
+        # ('system', 'your name is delta-chat-bot and you are helping people to find the best phone that fits there needs and your response should not exceeds 100 word'),
         ('user', '{userInput}')
     ])
 
@@ -40,6 +50,6 @@ def simplechat(prompt: str):
 
 
 if __name__ == "__main__":
-    # for chunk in simplechat('hi'):
-    #     print(chunk, end='', flush=True)
-    llm_init()
+    for chunk in simplechat('hi'):
+        print(chunk, end='', flush=True)
+    # llm_init()

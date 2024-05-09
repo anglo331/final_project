@@ -43,23 +43,17 @@ def aboutus():
     return render_template('aboutus.html', user=current_user)
 
 
-# @views.route('/chat', methods=['GET', "POST"])
-# def chat():
-#     if request.method == 'GET':
-#         msg = request.form.get("msg")
-#         answer = simplechat(msg)
+@views.route('/chat', methods=['GET', "POST"])
+def chat():
+    if request.method == 'GET':
+        msg = request.form.get("msg")
+        answer = simplechat(msg)
 
-#         res =[
-#             {'role': 'user', 'massage': msg},
-#             {'role': 'ai', 'massage': answer}]
+        res =[
+            {'role': 'user', 'massage': msg},
+            {'role': 'ai', 'massage': answer}]
 
-#         return render_template('chat.html', respons=res, user=current_user)
+        return render_template('chat.html', respons=res, user=current_user)
 
-#     return render_template('chat.html', user=current_user)
+    return render_template('chat.html', user=current_user)
 
-
-# @views.route('/get', methods=['GET', "POST"])
-# def responder():
-#     msg = request.form.get("msg")
-
-#     return (simplechat(msg))
