@@ -7,6 +7,7 @@ import os
 from flask_restful import Api
 
 
+
 db = SQLAlchemy()
 app = Flask(__name__)
 api = Api(app)
@@ -15,8 +16,8 @@ api = Api(app)
 def create_app():
 
     app.config['SECRET_KEY'] = "VERY_STRONG_HASH"
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:&Shc>tdjRXx46=B@admin.cxq26ys6yxv9.us-east-1.rds.amazonaws.com:3306/main'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///main_data.db'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:&Shc>tdjRXx46=B@admin.cxq26ys6yxv9.us-east-1.rds.amazonaws.com:3306/main'
     db.init_app(app)
 
     from .views import views

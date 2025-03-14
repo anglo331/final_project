@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from .models import Phones
 from . import db
-from .ai import simplechat
+# from .ai import simplechat
 
 
 views = Blueprint("views", __name__)

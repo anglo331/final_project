@@ -1,5 +1,5 @@
 from webapp import create_app
-from webapp.ai import llm_init
+# from webapp.ai import llm_init
 
 
 app = create_app()
