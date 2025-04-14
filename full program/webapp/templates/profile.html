@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title%} profile {%endblock%} {%block body%}
+
+<!--<style>-->
+<!--    body {-->
+<!--        background-image: url("https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=");-->
+<!--        background-repeat: no-repeat;-->
+<!--        background-size: cover;-->
+<!--    }-->
+<!--</style>-->
+        <img
+            src='https://random.imagecdn.app/500/100'
+            alt="random image"
+            class="border w-100 "
+        />
+
+	<br/>
+
+	<div class="container">
+        <p class="h3">
+            <span class="h4 fw-bold">username:</span> {{user.u_name}}
+        </p>
+        <p class="h3">
+            <span class="h4 fw-bold">email:</span> {{user.email}}
+        </p>
+	</div>
+{% endblock %}
